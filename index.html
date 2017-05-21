@@ -591,7 +591,7 @@ table.CodeRay td.code>pre{padding:0}
 <h3 id="_コンセプト"><a class="anchor" href="#_コンセプト"></a>1.2. コンセプト</h3>
 <div class="paragraph">
 <p>シンプルで普通。<br>
-タブレット上で思考をストレスなく書き出していく上で普通のことが普通にできるアプリを目指しています。</p>
+タブレット上で思考をストレスなく書き出していくアクティビティが普通にできるアプリを目指しています。</p>
 </div>
 </div>
 <div class="sect2">
@@ -623,16 +623,23 @@ table.CodeRay td.code>pre{padding:0}
 <li>
 <p>テキストの入力</p>
 </li>
-<li>
-<p>別のマップへのリンク</p>
-</li>
-<li>
-<p>以前のバージョンのMindBoardデータの読み込み</p>
-</li>
-<li>
-<p>テーマカラーの変更</p>
-</li>
 </ul>
+</div>
+<div class="paragraph">
+<p>など。</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+今後対応予定の機能の詳細は、
+このドキュメントの <strong>開発中の機能の紹介</strong> セクションを参照ください。
+</td>
+</tr>
+</table>
 </div>
 </div>
 <div class="sect2">
@@ -681,9 +688,20 @@ Galaxy Note シリーズや Galaxy Tab A with S-Pen など S-Pen 対応の Andro
 <div class="sect2">
 <h3 id="_概要_2"><a class="anchor" href="#_概要_2"></a>2.1. 概要</h3>
 <div class="paragraph">
-<p>マインドマップを編集するための <strong>(1)メインアクティビティ</strong> と、
-作成したマインドマップを一時的に保管するための <strong>(2)ファイル管理アクティビティ</strong> と、
-機能を拡張するための <strong>(3)プラグインアクティビティ</strong> との ３つのアクティビティで構成されています。</p>
+<p>MindBoard 2 は以下の３つのアクティビティから構成されています。</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>マインドマップを編集するための <strong>(1)メインアクティビティ</strong></p>
+</li>
+<li>
+<p>作成したマインドマップを一時的に保管するためのバッファである <strong>(2)ファイル管理アクティビティ</strong></p>
+</li>
+<li>
+<p>機能を拡張するための <strong>(3)プラグインアクティビティ</strong></p>
+</li>
+</ol>
 </div>
 </div>
 <div class="sect2">
@@ -694,8 +712,8 @@ Galaxy Note シリーズや Galaxy Tab A with S-Pen など S-Pen 対応の Andro
 </div>
 </div>
 <div class="paragraph">
-<p>ここでは マインドマップドキュメントを編集します。<strong>マップ編集</strong> と <strong>ノード編集</strong> の２つのモードがあります。
-起動時は マップ編集モードになっていて、ノードをダブルタップすると ノード編集モードに切り替わります。</p>
+<p>メインアクティビティではマインドマップを編集します。<br>
+<strong>マップ編集</strong> と <strong>ノード編集</strong> の２つのモードから構成されます。<br></p>
 </div>
 <div class="paragraph">
 <p>アクションバー上のアイコンをタップすることでファイル管理アクティビティに切り替えたり、現在編集中のドキュメントを Google Drive に保存することができます。</p>
@@ -715,13 +733,13 @@ Galaxy Note シリーズや Galaxy Tab A with S-Pen など S-Pen 対応の Andro
 <div class="sect5">
 <h6 id="_ノードコンテンツの作成"><a class="anchor" href="#_ノードコンテンツの作成"></a>ノードコンテンツの作成</h6>
 <div class="paragraph">
-<p>ノード内にアイデアを書き出すには、ノードをダブルタップして、編集モードに切り替えます。</p>
+<p>ノード内にアイデアを書くには、ノードをダブルタップして、編集モードに切り替えます。</p>
 </div>
 </div>
 <div class="sect5">
 <h6 id="_子ノード作成方法"><a class="anchor" href="#_子ノード作成方法"></a>子ノード作成方法</h6>
 <div class="paragraph">
-<p>ノードをタップして選択すると、子ノード作成用のハンドルが表示されます。それをドラッグすることで子ノードを作成します。</p>
+<p>子ノードを作成するノードの左右に表示されるハンドルを使用します。</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -731,7 +749,7 @@ Galaxy Note シリーズや Galaxy Tab A with S-Pen など S-Pen 対応の Andro
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>ターゲットとなるノードをタップして選択→ 子ノード生成ハンドルが表示される</p>
+<p>ターゲットとなるノードをタップして選択→ 子ノード生成ハンドルがターゲットノードの左右に表示される</p>
 </li>
 <li>
 <p>子ノード生成ハンドルをドラッグ</p>
@@ -746,6 +764,33 @@ Galaxy Note シリーズや Galaxy Tab A with S-Pen など S-Pen 対応の Andro
 </div>
 </div>
 <div class="sect5">
+<h6 id="_親ノードと子ノードの連結解除"><a class="anchor" href="#_親ノードと子ノードの連結解除"></a>親ノードと子ノードの連結解除</h6>
+<div class="imageblock">
+<div class="content">
+<img src="images/screenshots/main-activity-how-to-change-node.png" alt="Change Node Handle">
+</div>
+</div>
+<div class="paragraph">
+<p>親ノードを選択すると、親ノードと子ノードを結ぶブランチの上の中間点にノード連携解除ハンドルが表示されます。<br>
+そのハンドルをドラッグして、親ノードと子ノードの連結を解除します。</p>
+</div>
+<div class="paragraph">
+<p>連携を解除した子ノードはセントラルノードに変わります。</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+子ノード生成ハンドルをドラッグして、セントラルノードに重ねることで、そのノードを再度別の親ノードと連結できます。
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect5">
 <h6 id="_ノード位置の移動"><a class="anchor" href="#_ノード位置の移動"></a>ノード位置の移動</h6>
 <div class="paragraph">
 <p>ノードをドラッグします。</p>
@@ -755,6 +800,12 @@ Galaxy Note シリーズや Galaxy Tab A with S-Pen など S-Pen 対応の Andro
 <h6 id="_ノードの削除"><a class="anchor" href="#_ノードの削除"></a>ノードの削除</h6>
 <div class="paragraph">
 <p>ノードを選択して、編集ツールバーの削除アイコンをタップします。</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/screenshots/main-activity-remove-node-icon.png" alt="main activity remove node icon">
+</div>
+<div class="title">Figure 1. Remove Node Icon</div>
 </div>
 </div>
 </div>
@@ -766,14 +817,35 @@ Galaxy Note シリーズや Galaxy Tab A with S-Pen など S-Pen 対応の Andro
 </div>
 </div>
 <div class="paragraph">
-<p>ノード編集モード内に ペンモード / 消しゴムモード / 選択モードがあります。
-これらのモード変更はツールスイッチャーの各アイコンをタップして切り替えます。</p>
+<p>ノードにアイデアを書くためのモードです。</p>
 </div>
+<div class="paragraph">
+<p>マップ編集モードに戻るには、画面右上のクローズボタンをタップします。</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+スタイラスを使用している場合は、指でのダブルタップでもマップ編集モードに戻ることができます。
+</td>
+</tr>
+</table>
+</div>
+<div class="sect5">
+<h6 id="_編集ツールと編集モード"><a class="anchor" href="#_編集ツールと編集モード"></a>編集ツールと編集モード</h6>
 <div class="imageblock">
 <div class="content">
 <img src="images/screenshots/main-activity-node-edit-mode-tool-sw.png" alt="main activity node edit mode tool sw">
 </div>
-<div class="title">Figure 1. ツールスイッチャー</div>
+<div class="title">Figure 2. Tool Switcher</div>
+</div>
+<div class="paragraph">
+<p>ペンモード / 消しゴムモード / 選択モードの３つのモードがあります。<br>
+これらのモード変更はツールスイッチャーの各アイコンをタップして切り替えます。</p>
+</div>
 </div>
 </div>
 </div>
@@ -787,36 +859,57 @@ Galaxy Note シリーズや Galaxy Tab A with S-Pen など S-Pen 対応の Andro
 <div class="ulist">
 <ul>
 <li>
-<p>a. ファイル管理アクティビティへの移動アイコン</p>
+<p>(<strong>a</strong>). ファイル管理アクティビティボタン</p>
 <div class="ulist">
 <ul>
 <li>
-<p>ローカルデバイスにバッファしている別のドキュメントに切り替えたり、バッファの管理をするためにファイル管理アクティビティに切り替えます。</p>
+<p>ファイル管理アクティビティへ移動します。バックグラウンドバッファにアクセスできます。</p>
 </li>
 </ul>
 </div>
 </li>
 <li>
-<p>b. 新規ドキュメント</p>
+<p>(<strong>b</strong>). 新規ドキュメント作成ボタン</p>
 <div class="ulist">
 <ul>
 <li>
 <p>新規ドキュメントを作成してアクティブドキュメントとします。</p>
 </li>
 <li>
-<p>今まで編集していたドキュメントはバックグラウンドバッファに入ります。再度編集するにはファイル管理アクティビティから呼び出します。</p>
+<p>今まで編集していたドキュメントはバックグラウンドバッファに入ります。バックグラウンドバッファ内のファイルはファイル管理アクティビティからアクセスできます。</p>
 </li>
 </ul>
 </div>
 </li>
 <li>
-<p>c. Google Drive からファイルを開きます。</p>
+<p>(<strong>c</strong>). オープンボタン</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Google Drive からファイルを開きます。</p>
+</li>
+</ul>
+</div>
 </li>
 <li>
-<p>d. Google Drive にファイルを保存します。</p>
+<p>(<strong>d</strong>). セーブボタン</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Google Drive にファイルを保存します。</p>
+</li>
+</ul>
+</div>
 </li>
 <li>
-<p>e. Google Drive から開いたファイルと現在のアクティブドキュメントを同期します。</p>
+<p>(<strong>e</strong>). シンクボタン</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Google Drive から開いたファイルと現在のアクティブドキュメントを同期します。</p>
+</li>
+</ul>
+</div>
 </li>
 </ul>
 </div>
@@ -865,6 +958,9 @@ Galaxy Note シリーズや Galaxy Tab A with S-Pen など S-Pen 対応の Andro
 <li>
 <p>テーマカラーの変更</p>
 </li>
+<li>
+<p>ペンのバリエーション（色と太さ）の変更機能</p>
+</li>
 </ul>
 </div>
 </div>
@@ -872,7 +968,7 @@ Galaxy Note シリーズや Galaxy Tab A with S-Pen など S-Pen 対応の Andro
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2017-05-21 21:24:51 JST
+Last updated 2017-05-21 21:20:01 JST
 </div>
 </div>
 </body>
