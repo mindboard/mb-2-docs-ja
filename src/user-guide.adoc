@@ -40,7 +40,7 @@ MindBoard 2 は シンプルなAndroid タブレット向けの手書きマイ�
 * Android 4.4 Kitkat 以上の Android タブレット
 
 [NOTE]
-Galaxy Note シリーズや Galaxy Tab A with S-Pen など S-Pen 対応の Android タブレットでもっとも使いやすくなるように設計しています。
+Galaxy Note シリーズや Galaxy Tab A with S-Pen など S-Pen 対応の Android タブレットで、もっとも使いやすくなるように設計しています。
 
 
 === インストール
@@ -127,9 +127,14 @@ image::screenshots/main-activity-node-edit-mode-tool-sw.png[title="ツールス�
 
 image::screenshots/main-activity-action-bar.png[Main Activity]
 
-* a. ファイル管理画面への移動アイコン
-** ローカルデバイスにバッファしている別のドキュメントに切り替えたり、バッファの管理をするためにファイル管理画面に切り替えます。
-
+* a. ファイル管理アクティビティへの移動アイコン
+** ローカルデバイスにバッファしている別のドキュメントに切り替えたり、バッファの管理をするためにファイル管理アクティビティに切り替えます。
+* b. 新規ドキュメント
+** 新規ドキュメントを作成してアクティブドキュメントとします。
+** 今まで編集していたドキュメントはバックグラウンドバッファに入ります。再度編集するにはファイル管理アクティビティから呼び出します。
+* c. Google Drive からファイルを開きます。
+* d. Google Drive にファイルを保存します。
+* e. Google Drive から開いたファイルと現在のアクティブドキュメントを同期します。
 
 
 === ファイル管理アクティビティ
@@ -145,4 +150,11 @@ image::screenshots/main-activity-action-bar.png[Main Activity]
 
 == 開発中の機能の紹介
 
+今後のバージョンアップで以下の機能に対応予定です。
+
+* 画像の挿入
+* テキストの入力
+* 別のマップへのリンク
+* 以前のバージョンのMindBoardデータの読み込み
+* テーマカラーの変更
 
