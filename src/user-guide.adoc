@@ -1,9 +1,10 @@
 
-= イントロダクション
+= MindBoard 2 User Guide
+== イントロダクション
 
 image::screenshots/mind-mapping-example.png[MindBoard 2]
 
-== 概要
+=== 概要
 
 MindBoard 2 は シンプルなAndroid タブレット向けの手書きマインドマップ作成支援アプリです。
 
@@ -12,13 +13,13 @@ MindBoard 2 は シンプルなAndroid タブレット向けの手書きマイ�
 そうでなければ指による入力対応のアプリとして起動します。
 
 
-== コンセプト
+=== コンセプト
 
 シンプルで普通。 +
 タブレット上で思考をストレスなく書き出していく上で普通のことが普通にできるアプリを目指しています。
 
 
-== 主な特長
+=== 主な特長
 
 * スタイラス/指を使った思考のアウトプット
 * ひとつのドキュメント内での複数センターノード（マインドマップ）の作成に対応
@@ -34,7 +35,7 @@ MindBoard 2 は シンプルなAndroid タブレット向けの手書きマイ�
 * テーマカラーの変更
 
 
-== 必要な環境
+=== 必要な環境
 
 * Android 4.4 Kitkat 以上の Android タブレット
 
@@ -42,12 +43,12 @@ MindBoard 2 は シンプルなAndroid タブレット向けの手書きマイ�
 Galaxy Note シリーズや Galaxy Tab A with S-Pen など S-Pen 対応の Android タブレットでもっとも使いやすくなるように設計しています。
 
 
-== インストール
+=== インストール
 
 Google Play から https://play.google.com/store/apps/details?id=com.mindboardapps.app.mb2.client[MindBoard 2] を入手します。
 
 
-== 連絡先
+=== 連絡先
 
 何か不明点等がございましたら、こちら http://www.mindboardapps.com/contact_ja.html[連絡先情報] までご連絡ください。
 ご要望などのフィードバックをいただけると幸いです。
@@ -55,15 +56,15 @@ Google Play から https://play.google.com/store/apps/details?id=com.mindboardap
 アプリの更新情報はこちらのページ https://www.facebook.com/mindboardapps[Facebook] / https://twitter.com/mindboard/[Twitter] をご覧ください。
 
 
-= MindBoard 2 の使い方
+== MindBoard 2 の使い方
 
-== 概要
+=== 概要
 
 マインドマップを編集するための *(1)メインアクティビティ* と、
 作成したマインドマップを一時的に保管するための *(2)ファイル管理アクティビティ* と、
 機能を拡張するための *(3)プラグインアクティビティ* との ３つのアクティビティで構成されています。
 
-== メインアクティビティ
+=== メインアクティビティ
 
 image::screenshots/main-activity.png[Main Activity]
 
@@ -73,21 +74,21 @@ image::screenshots/main-activity.png[Main Activity]
 アクションバー上のアイコンをタップすることでファイル管理アクティビティに切り替えたり、現在編集中のドキュメントを Google Drive に保存することができます。
 
 
-=== アクティブドキュメント編集機能
+==== アクティブドキュメント編集機能
 
-==== マップ編集モード
+===== マップ編集モード
 
 image::screenshots/main-activity-map-edit-mode.png[Main Activity]
 
 ノードを自在につくりながらマインドマッピングを行うモードです。
 
 
-===== ノードコンテンツの作成
+====== ノードコンテンツの作成
 
 ノード内にアイデアを書き出すには、ノードをダブルタップして、編集モードに切り替えます。
 
 
-===== 子ノード作成方法
+====== 子ノード作成方法
 
 ノードをタップして選択すると、子ノード作成用のハンドルが表示されます。それをドラッグすることで子ノードを作成します。
 
@@ -99,12 +100,12 @@ image::screenshots/main-activity-how-to-create-sub-node.png[Main Activity]
 1. 子ノードが生成される
 
 
-===== ノード位置の移動
+====== ノード位置の移動
 
 ノードをドラッグします。
 
 
-===== ノードの削除
+====== ノードの削除
 
 ノードを選択して、編集ツールバーの削除アイコンをタップします。
 
@@ -112,7 +113,7 @@ image::screenshots/main-activity-how-to-create-sub-node.png[Main Activity]
 
 
 
-==== ノード編集モード
+===== ノード編集モード
 
 image::screenshots/main-activity-node-edit-mode.png[Main Activity]
 
@@ -122,7 +123,7 @@ image::screenshots/main-activity-node-edit-mode.png[Main Activity]
 image::screenshots/main-activity-node-edit-mode-tool-sw.png[title="ツールスイッチャー"]
 
 
-=== アクティブドキュメントファイル管理
+==== アクティブドキュメントファイル管理
 
 image::screenshots/main-activity-action-bar.png[Main Activity]
 
@@ -131,17 +132,17 @@ image::screenshots/main-activity-action-bar.png[Main Activity]
 
 
 
-== ファイル管理アクティビティ
+=== ファイル管理アクティビティ
 
-=== プライマリフォルダ
+==== プライマリフォルダ
 
-=== アーカイブフォルダ
+==== アーカイブフォルダ
 
-== プラグインアクティビティ
+=== プラグインアクティビティ
 
-=== PDFエクスポート
+==== PDFエクスポート
 
 
-= 開発中の機能の紹介
+== 開発中の機能の紹介
 
 
