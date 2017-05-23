@@ -154,7 +154,7 @@ image::screenshots/main-activity-node-edit-mode-tool-sw.png[title="Tool Switcher
 
 
 
-==== アクティブドキュメントファイル管理
+==== アクティブドキュメントのファイル管理
 
 image::screenshots/main-activity-action-bar.png[Main Activity]
 
@@ -173,9 +173,43 @@ image::screenshots/main-activity-action-bar.png[Main Activity]
 
 === ファイル管理アクティビティ
 
+image::screenshots/finder-activity-overview.png[File Manager Activity]
+
+ドキュメントの管理画面です。 +
+*プライマリ* / *アーカイブ* の２つのフォルダがあります。
+
+
+
 ==== プライマリフォルダ
 
+image::screenshots/finder-activity-primary-folder.png[File Manager Activity Primary Folder]
+
+* (*a*). 戻るボタン
+** タップすると、メインアクティビティに戻ります。
+* (*b*). PDFエクスポートボタン
+** 選択中のドキュメントをPDFに変換します。結果のPDFは Google Drive へ保存します。
+* (*c*). アーカイブボタン
+** 選択中のドキュメントをアーカイブフォルダへ移動します。
+* (*d*). プラグインボタン
+** プラグインアクティビティへ移動します。
+* (*e*). ドキュメントプレビューボタン
+** ダブルタップするとそのドキュメントをアクティブドキュメントとして読み込み、メインアクティビティへ戻ります。
+* (*f*). アーカイブボタン
+** タップすると、アーカイブフォルダに切り替わります。
+
+
 ==== アーカイブフォルダ
+
+image::screenshots/finder-activity-archive-folder.png[File Manager Activity Archive Folder]
+
+* (*a*). プライマリへ戻すボタン
+** 選択中のドキュメントをプライマリフォルダに移動します。
+* (*b*). クリアボタン
+** アーカイブフォルダ内にあるすべてのドキュメントを完全に削除します。
+* (*c*). プライマリボタン
+** タップすると、プライマリフォルダに切り替わります。
+
+
 
 === プラグインアクティビティ
 
