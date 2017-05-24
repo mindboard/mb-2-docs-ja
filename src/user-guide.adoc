@@ -1,5 +1,5 @@
 
-= MindBoard 2 User Guide
+= MindBoard 2 ユーザーガイド
 == イントロダクション
 
 image::screenshots/mind-mapping-example.png[MindBoard 2]
@@ -8,7 +8,7 @@ image::screenshots/mind-mapping-example.png[MindBoard 2]
 
 MindBoard 2 は シンプルなAndroid タブレット向けの手書きマインドマップ作成支援アプリです。
 
-指での入力/スタイラスでの入力のいずれかに対応しています。
+指での入力/スタイラスでの入力のいずれかに対応しています。 +
 もし使用中の Android タブレットがスタイラス対応デバイスであればスタイラス対応のアプリとして、
 そうでなければ指による入力対応のアプリとして起動します。
 
@@ -35,7 +35,7 @@ MindBoard 2 は シンプルなAndroid タブレット向けの手書きマイ�
 
 [NOTE]
 今後対応予定の機能の詳細は、
-このドキュメントの *開発中の機能の紹介* セクションを参照ください。
+このドキュメントの *開発中の機能* セクションを参照ください。
 
 
 === 必要な環境
@@ -76,31 +76,31 @@ image::screenshots/main-activity.png[Main Activity]
 
 メインアクティビティではマインドマップを編集します。 +
 *マップ編集* と *ノード編集* の２つのモードから構成されます。 +
-
-アクションバー上のアイコンをタップすることでファイル管理アクティビティに切り替えたり、現在編集中のドキュメントを Google Drive に保存することができます。
+アクションバー上のアイコンをタップすることでファイル管理アクティビティに切り替えたり、
+現在編集中のドキュメントを Google Drive に保存することができます。
 
 
 ==== アクティブドキュメント編集機能
 
 ===== マップ編集モード
 
-image::screenshots/main-activity-map-edit-mode.png[Main Activity]
+image::screenshots/main-activity-map-edit-mode.png[Map Edit Mode]
 
 ノードを自在につくりながらマインドマッピングを行うモードです。
 
 
-====== ノードコンテンツの作成
+====== ノード編集モードへの切り替え
 
-ノード内にアイデアを書くには、ノードをダブルタップして、編集モードに切り替えます。
+ノードをダブルタップします。
 
 
 ====== 子ノード作成方法
 
-子ノードを作成するノードの左右に表示されるハンドルを使用します。
+子ノードを作成するノードの左または右に表示されるハンドルを使用します。
 
-image::screenshots/main-activity-how-to-create-sub-node.png[Main Activity]
+image::screenshots/main-activity-how-to-create-sub-node.png[Creating Child Node]
 
-1. ターゲットとなるノードをタップして選択→ 子ノード生成ハンドルがターゲットノードの左右に表示される
+1. ターゲットとなるノードをタップして選択→ 子ノード生成ハンドルがターゲットノードの左または右に表示される
 1. 子ノード生成ハンドルをドラッグ
 1. 適当な位置でドラッグを終了
 1. 子ノードが生成される
@@ -108,12 +108,12 @@ image::screenshots/main-activity-how-to-create-sub-node.png[Main Activity]
 
 ====== 親ノードと子ノードの連結解除
 
-image::screenshots/main-activity-how-to-change-node.png[Change Node Handle]
+image::screenshots/main-activity-how-to-change-node.png[Cut Branch Handle]
 
-親ノードを選択すると、親ノードと子ノードを結ぶブランチの上の中間点にノード連携解除ハンドルが表示されます。 +
+親ノードを選択すると、親ノードと子ノードを結ぶブランチの上の中間点にノード連結解除ハンドルが表示されます。 +
 そのハンドルをドラッグして、親ノードと子ノードの連結を解除します。
 
-連携を解除した子ノードはセントラルノードに変わります。
+連結を解除した子ノードはセントラルノードに変わります。
 
 [NOTE]
 子ノード生成ハンドルをドラッグして、セントラルノードに重ねることで、そのノードを再度別の親ノードと連結できます。
@@ -124,11 +124,21 @@ image::screenshots/main-activity-how-to-change-node.png[Change Node Handle]
 ノードをドラッグします。
 
 
+====== ノードのリサイズ
+
+ノードを選択して、ノードの選択ボーダーの右下をドラッグします。
+
+
+====== ノードの折りたたみと展開
+
+ノードを選択して、ノードの下の部分に出現する 折りたたみ/展開 ボタンをタップします。
+
+
 ====== ノードの削除
 
 ノードを選択して、編集ツールバーの削除アイコンをタップします。
 
-image::screenshots/main-activity-remove-node-icon.png[title="Remove Node Icon"]
+image::screenshots/main-activity-remove-node-icon.png[Delete Node Button"]
 
 
 
@@ -143,32 +153,33 @@ image::screenshots/main-activity-node-edit-mode.png[Main Activity]
 マップ編集モードに戻るには、画面右上のクローズボタンをタップします。
 
 [NOTE]
-スタイラスを使用している場合は、指でのダブルタップでもマップ編集モードに戻ることができます。
-
-====== 編集ツールと編集モード
-
-image::screenshots/main-activity-node-edit-mode-tool-sw.png[title="Tool Switcher"]
-
-ペンモード / 消しゴムモード / 選択モードの３つのモードがあります。 +
-これらのモード変更はツールスイッチャーの各アイコンをタップして切り替えます。
+スタイラスを使用している場合は、指を使ったダブルタップジェスチャーでもマップ編集モードに戻ることができます。
 
 
+====== ツールスイッチャー
 
-==== アクティブドキュメントのファイル管理
+image::screenshots/main-activity-node-edit-mode-tool-sw.png[Tool Switcher]
+
+ペン / 消しゴム / 選択 の３つのツールがあります。 +
+ツールの変更はツールスイッチャーから特定ツールをタップします。
+
+
+
+==== 現在のアクティブドキュメントのファイル管理
 
 image::screenshots/main-activity-action-bar.png[Main Activity]
 
 * (*a*). ファイル管理アクティビティボタン
-** ファイル管理アクティビティへ移動します。バックグラウンドバッファにアクセスできます。
+** ファイル管理アクティビティへ移動します。バックグラウンドバッファとして複数のファイルを管理できます。
 * (*b*). 新規ドキュメント作成ボタン
 ** 新規ドキュメントを作成してアクティブドキュメントとします。
 ** 今まで編集していたドキュメントはバックグラウンドバッファに入ります。バックグラウンドバッファ内のファイルはファイル管理アクティビティからアクセスできます。
-* (*c*). オープンボタン
+* (*c*). ドキュメントオープンボタン
 ** Google Drive からファイルを開きます。
-* (*d*). セーブボタン
-** Google Drive にファイルを保存します。
-* (*e*). シンクボタン
-** Google Drive から開いたファイルと現在のアクティブドキュメントを同期します。
+* (*d*). ドキュメントセーブボタン
+** Google Drive にドキュメントを保存します。
+* (*e*). ドキュメント同期ボタン
+** Google Drive から開いたドキュメントと現在のアクティブドキュメントを同期します。
 
 
 === ファイル管理アクティビティ
@@ -188,13 +199,13 @@ image::screenshots/finder-activity-primary-folder.png[File Manager Activity Prim
 ** タップすると、メインアクティビティに戻ります。
 * (*b*). PDFエクスポートボタン
 ** 選択中のドキュメントをPDFに変換します。結果のPDFは Google Drive へ保存します。
-* (*c*). アーカイブボタン
+* (*c*). アーカイブへ移動ボタン
 ** 選択中のドキュメントをアーカイブフォルダへ移動します。
 * (*d*). プラグインボタン
 ** プラグインアクティビティへ移動します。
 * (*e*). ドキュメントプレビューボタン
 ** ダブルタップするとそのドキュメントをアクティブドキュメントとして読み込み、メインアクティビティへ戻ります。
-* (*f*). アーカイブ表示ボタン
+* (*f*). アーカイブフォルダ表示ボタン
 ** タップすると、アーカイブフォルダに切り替わります。
 
 
@@ -220,12 +231,13 @@ image::screenshots/plugins-activity.png[Plugins Activity]
 
 *BUY* ボタンをタップすると、購入プロセスに入ります。
 
-image::screenshots/plugins-activity-pdf-export.png[Plugins Activity PDF Export]
+image::screenshots/plugins-activity-pdf-export.png[Purchasing PDF Export Plugin]
 
+[NOTE]
 *PDF Export* プラグインを購入すると、ファイル管理アクティビティで PDFエクスポートボタンが有効になります。
 
 
-== 開発中の機能の紹介
+== 開発中の機能
 
 今後のバージョンアップで以下の機能に対応予定です。
 
