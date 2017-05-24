@@ -213,7 +213,16 @@ image::screenshots/finder-activity-archive-folder.png[File Manager Activity Arch
 
 === プラグインアクティビティ
 
-==== PDFエクスポート
+image::screenshots/plugins-activity.png[Plugins Activity]
+
+拡張機能の一覧です。 +
+現在のところ、拡張機能は *PDF Export* プラグインのみの提供です。
+
+*BUY* ボタンをタップすると、購入プロセスに入ります。
+
+image::screenshots/plugins-activity-pdf-export.png[Plugins Activity PDF Export]
+
+*PDF Export* プラグインを購入すると、ファイル管理アクティビティで PDFエクスポートボタンが有効になります。
 
 
 == 開発中の機能の紹介
