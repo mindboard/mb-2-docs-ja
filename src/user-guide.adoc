@@ -141,11 +141,9 @@ image::screenshots/main-activity-how-to-change-node.png[Cut Branch Handle]
 image::screenshots/main-activity-remove-node-icon.png[Delete Node Button"]
 
 
-
-
 ===== ノード編集モード
 
-image::screenshots/main-activity-node-edit-mode.png[Main Activity]
+image::screenshots/main-activity-node-edit-mode.png[Node Edit Mode]
 
 ノードにアイデアを書くためのモードです。
 
@@ -156,13 +154,28 @@ image::screenshots/main-activity-node-edit-mode.png[Main Activity]
 スタイラスを使用している場合は、指を使ったダブルタップジェスチャーでもマップ編集モードに戻ることができます。
 
 
-====== ツールスイッチャー
+====== ツールスイッチャー 
+
+image::screenshots/main-activity-node-edit-mode-tool-sw-non-spen.png[Tool Switcher"]
+
+ペン / 消しゴム / 選択 / ズーム の４つのツールがあります。 +
+ツールの変更はツールスイッチャーから特定ツールをタップします。
+
+[NOTE]
+現在のところペンの色は黒のみです。 +
+将来プラグインとして複数の色や太さのペンを提供予定です。
+
+
+====== ツールスイッチャー ( スタイラス対応デバイスの場合 )
 
 image::screenshots/main-activity-node-edit-mode-tool-sw.png[Tool Switcher]
 
 ペン / 消しゴム / 選択 の３つのツールがあります。 +
 ツールの変更はツールスイッチャーから特定ツールをタップします。
 
+[NOTE]
+現在のところペンの色は黒のみです。 +
+将来プラグインとして複数の色や太さのペンを提供予定です。
 
 
 ==== 現在のアクティブドキュメントのファイル管理
