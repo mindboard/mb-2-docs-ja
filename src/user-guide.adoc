@@ -2,7 +2,7 @@
 = MindBoard 2 ユーザーガイド
 == イントロダクション
 
-image::screenshots/mind-mapping-example.png[MindBoard 2]
+image::screenshots/an-example-map.png[MindBoard 2]
 
 === 概要
 
@@ -24,12 +24,8 @@ MindBoard 2 は シンプルなAndroid タブレット向けの手書きマイ�
 * スタイラス/指を使った思考のアウトプット
 * ひとつのドキュメント内での複数センターノード（マインドマップ）の作成に対応
 * PDF エクスポート (有料プラグイン)
+* 画像の挿入/テキスト入力の対応
 * Google Drive 対応
-
-今後のバージョンアップで以下の機能に対応予定です。
-
-* 画像の挿入
-* テキストの入力
 
 など。
 
@@ -43,8 +39,7 @@ MindBoard 2 は シンプルなAndroid タブレット向けの手書きマイ�
 * Android 4.4 Kitkat 以上の Android タブレット
 
 [NOTE]
-Galaxy Note シリーズや Galaxy Tab A with S-Pen など S-Pen 対応の Android タブレットで、もっとも使いやすくなるように設計しています。
-
+S Pen (Samsung) や Z Stylus (ASUS) 対応の Androidタブレットで、もっとも使いやすくなることを想定してデザインしています。
 
 === インストール
 
@@ -63,38 +58,90 @@ Google Play から https://play.google.com/store/apps/details?id=com.mindboardap
 
 === 概要
 
-MindBoard 2 は以下の３つのアクティビティから構成されています。
+MindBoard 2 は以下の4つの画面から構成されています。
 
-1. マインドマップを編集するための *(1)メインアクティビティ*
-1. 作成したマインドマップを一時的に保管するためのバッファである *(2)ファイル管理アクティビティ*
-1. 機能を拡張するための *(3)プラグインアクティビティ*
+- *(1)ファイル管理画面* 作成したマインドマップを一時的に保管するためのバッファ画面
+- *(2)メイン画面* マインドマップを編集する画面
+- *(3)設定画面* 各種設定を行う画面
+- *(4)プラグイン画面* 拡張機能のインストール・管理画面
 
+これら各画面の切り替えは下部のナビゲーションを使用します。
 
-=== メインアクティビティ
-
-image::screenshots/main-activity.png[Main Activity]
-
-メインアクティビティではマインドマップを編集します。 +
-*マップ編集* と *ノード編集* の２つのモードから構成されます。 +
-アクションバー上のアイコンをタップすることでファイル管理アクティビティに切り替えたり、
-現在編集中のドキュメントを Google Drive に保存することができます。
+image::screenshots/bottom-navigation-overview.png[Bottom Navigation, title="ナビゲーション"]
 
 
-==== アクティブドキュメント編集機能
+=== (1)ファイル管理画面
 
-===== マップ編集モード
+ドキュメントの管理画面です。 +
+*プライマリ* / *アーカイブ* の２つのフォルダがあります。
 
-image::screenshots/main-activity-map-edit-mode.png[Map Edit Mode]
+image::screenshots/file-manager-overview.png[File Manager, title="フォルダ切り替え"]
+
+
+* image:icons/primary-folder.png[Primary Folder] *プライマリ* / image:icons/archive-folder.png[Archive Folder] *アーカイブ* を切り替えるには左上にある該当のアイコンをタップします。
+
+
+
+==== プライマリフォルダ
+
+プライマリドキュメントを管理します。
+
+image::screenshots/file-manager-primary.png[File Manager (Primary Folder)]
+
+* image:icons/new-page.png[New Page] 新規ページを追加します。
+* image:icons/download-page.png[Download Page] ページを Google Drive から開きます。
+* image:icons/upload-page.png[Upload Page] 選択中のページを Google Drive に名前をつけて保存します。
+* image:icons/sync-page.png[Sync Page] 選択中のページを 該当する Google Drive File にマージします。
+* image:icons/move-to-archive.png[Move Page to Archive] 選択中のページを アーカイブフォルダ に移動します。
+
+
+==== アーカイブフォルダ
+
+アーカイブドキュメントを管理します。
+
+image::screenshots/file-manager-archive.png[File Manager (Archive Folder)]
+
+* image:icons/revert-from-archive.png[Revert Page from Archive] 選択中のページを プライマリフォルダ に戻します。
+* image:icons/empty-trash.png[Empty Archive] アーカイブフォルダ中のファイルを全て削除します。
+
+
+
+=== (2)メイン画面
+
+メイン画面ではマインドマップを編集します。
+
+image::screenshots/editor-overview.png[Editor]
+
+メイン画面は *マップ編集モード* と *ノード編集モード* の２つのモードから構成されます。
+
+
+==== マップ編集モード
 
 ノードを自在につくりながらマインドマッピングを行うモードです。
 
+image::screenshots/editor-map-edit-mode.png[Editor (Map Edit Mode)]
 
-====== ノード編集モードへの切り替え
+右上ツールバー
+
+* image:icons/change-branch-color.png[Change Branch Color] 選択中のノードのブランチカラーを変更します。
+* image:icons/export-as-pdf.png[Export as PDF] 編集中のドキュメントを PDF として Google Drive に保存します。
+
+左下ツールバー
+
+* image:icons/delete-node.png[Delete Node] 選択中のノードをを削除します。
+
+右下ツールバー
+
+* image:icons/undo.png[Undo] アンドゥします。
+* image:icons/redo.png[Redo] リドゥします。
+
+
+===== ノード編集モードへの切り替え
 
 ノードをダブルタップします。
 
 
-====== 子ノード作成方法
+===== 子ノード作成方法
 
 子ノードを作成するノードの左または右に表示されるハンドルを使用します。
 
@@ -106,7 +153,7 @@ image::screenshots/main-activity-how-to-create-sub-node.png[Creating Child Node]
 1. 子ノードが生成される
 
 
-====== 親ノードと子ノードの連結解除
+===== 親ノードと子ノードの連結解除
 
 image::screenshots/main-activity-how-to-change-node.png[Cut Branch Handle]
 
@@ -119,42 +166,63 @@ image::screenshots/main-activity-how-to-change-node.png[Cut Branch Handle]
 子ノード生成ハンドルをドラッグして、セントラルノードに重ねることで、そのノードを再度別の親ノードと連結できます。
 
 
-====== ノード位置の移動
+===== ノード位置の移動
 
 ノードをドラッグします。
 
 
-====== ノードのリサイズ
+===== ノードのリサイズ
 
 ノードを選択して、ノードの選択ボーダーの右下をドラッグします。
 
 
-====== ノードの折りたたみと展開
+===== ノードの折りたたみと展開
 
 ノードを選択して、ノードの下の部分に出現する 折りたたみ/展開 ボタンをタップします。
 
 
-====== ノードの削除
+===== ノードの削除
 
 ノードを選択して、編集ツールバーの削除アイコンをタップします。
 
 image::screenshots/main-activity-remove-node-icon.png[Delete Node Button"]
 
 
-===== ノード編集モード
-
-image::screenshots/main-activity-node-edit-mode.png[Node Edit Mode]
+==== ノード編集モード
 
 ノードにアイデアを書くためのモードです。
 
+image::screenshots/editor-node-edit-mode.png[Editor (Node Edit Mode)]
 
-マップ編集モードに戻るには、画面右上のクローズボタンをタップします。
+
+
+右上ツールバー
+
+* image:icons/choose-pen-color.png[Choose Pen Color] ペンの色を設定します / 選択中のグループに含まれるストロークの色を変更します。
+* image:icons/choose-text-color.png[Choose Text Color] 選択中のテキストの色を変更します。
+
+左下ツールバー
+
+* image:icons/ungroup.png[Ungroup] 選択中のグループを解除します。
+* image:icons/insert-image.png[Insert Image] 画像を挿入します。
+* image:icons/input-text.png[Input Text] テキストを挿入します。
+
+
+右下ツールバー
+
+* image:icons/undo.png[Undo] アンドゥします。
+* image:icons/redo.png[Redo] リドゥします。
+
+
+右上
+
+* image:icons/close-node-edit-mode.png[Back To Map Edit Mode] マップ編集モードに戻ります。
 
 [NOTE]
-スタイラスを使用している場合は、指を使ったダブルタップジェスチャーでもマップ編集モードに戻ることができます。
+ネイティブスタイラスモードでは、指を使ったダブルタップジェスチャーでもマップ編集モードに戻ることができます。
 
 
-====== ツールスイッチャー 
+===== ツールスイッチャー 
 
 image::screenshots/main-activity-node-edit-mode-tool-sw-non-spen.png[Tool Switcher"]
 
@@ -166,98 +234,68 @@ image::screenshots/main-activity-node-edit-mode-tool-sw-non-spen.png[Tool Switch
 将来プラグインとして複数の色や太さのペンを提供予定です。
 
 
-====== ツールスイッチャー ( スタイラス対応デバイスの場合 )
+===== ツールスイッチャー ( ネイティブスタイラスモードの場合 )
 
 image::screenshots/main-activity-node-edit-mode-tool-sw.png[Tool Switcher]
 
 ペン / 消しゴム / 選択 の３つのツールがあります。 +
 ツールの変更はツールスイッチャーから特定ツールをタップします。
 
+
+===== ストロークのグループ化
+
+複数のストロークをまとめてグループにすることができます。
+
+
+グループ化するには、ツールスイッチャーで選択ツールを選択した状態で、対象となるストロークを指またはスタイラスで囲みます。
+
+
+グループに対して以下の操作が可能です。
+
+* グループ内のストロークの色を変更
+* グループのリサイズ
+* グループの解除
+* グループの削除
+
+
+
+=== (3)設定画面
+
+各種設定を行います。
+
+image::screenshots/settings.png[Settings]
+
+* Use Native Stylus : ネイティブスタイルを使うかどうか。  +
+S-Pen, Z-Stylus のようなデジタイザー対応のAndroidタブレットを使用している場合にチェックします。
+
+
+
+=== (4)プラグイン画面
+
+拡張機能の一覧です。
+
+image::screenshots/plugins.png[Plugins]
+
 [NOTE]
-現在のところペンの色は黒のみです。 +
-将来プラグインとして複数の色や太さのペンを提供予定です。
-
-
-==== 現在のアクティブドキュメントのファイル管理
-
-image::screenshots/main-activity-action-bar.png[Main Activity]
-
-* (*a*). ファイル管理アクティビティボタン
-** ファイル管理アクティビティへ移動します。バックグラウンドバッファとして複数のファイルを管理できます。
-* (*b*). 新規ドキュメント作成ボタン
-** 新規ドキュメントを作成してアクティブドキュメントとします。
-** 今まで編集していたドキュメントはバックグラウンドバッファに入ります。バックグラウンドバッファ内のファイルはファイル管理アクティビティからアクセスできます。
-* (*c*). ドキュメントオープンボタン
-** Google Drive からファイルを開きます。
-* (*d*). ドキュメントセーブボタン
-** Google Drive にドキュメントを保存します。
-* (*e*). ドキュメント同期ボタン
-** Google Drive から開いたドキュメントと現在のアクティブドキュメントを同期します。
-
-
-=== ファイル管理アクティビティ
-
-image::screenshots/finder-activity-overview.png[File Manager Activity]
-
-ドキュメントの管理画面です。 +
-*プライマリ* / *アーカイブ* の２つのフォルダがあります。
-
-
-
-==== プライマリフォルダ
-
-image::screenshots/finder-activity-primary-folder.png[File Manager Activity Primary Folder]
-
-* (*a*). 戻るボタン
-** タップすると、メインアクティビティに戻ります。
-* (*b*). PDFエクスポートボタン
-** 選択中のドキュメントをPDFに変換します。結果のPDFは Google Drive へ保存します。
-* (*c*). アーカイブへ移動ボタン
-** 選択中のドキュメントをアーカイブフォルダへ移動します。
-* (*d*). プラグインボタン
-** プラグインアクティビティへ移動します。
-* (*e*). ドキュメントプレビューボタン
-** ダブルタップするとそのドキュメントをアクティブドキュメントとして読み込み、メインアクティビティへ戻ります。
-* (*f*). アーカイブフォルダ表示ボタン
-** タップすると、アーカイブフォルダに切り替わります。
-
-
-==== アーカイブフォルダ
-
-image::screenshots/finder-activity-archive-folder.png[File Manager Activity Archive Folder]
-
-* (*a*). プライマリへ戻すボタン
-** 選択中のドキュメントをプライマリフォルダに移動します。
-* (*b*). クリアボタン
-** アーカイブフォルダ内にあるすべてのドキュメントを完全に削除します。
-* (*c*). プライマリ表示ボタン
-** タップすると、プライマリフォルダに切り替わります。
-
-
-
-=== プラグインアクティビティ
-
-image::screenshots/plugins-activity.png[Plugins Activity]
-
-拡張機能の一覧です。 +
 現在のところ、拡張機能は *PDF Export* プラグインのみの提供です。
+
+
+==== 購入方法
 
 *BUY* ボタンをタップすると、購入プロセスに入ります。
 
-image::screenshots/plugins-activity-pdf-export.png[Purchasing PDF Export Plugin]
+image::screenshots/purchasing-pdf-export-plugin.png[Purchasing PDF Export Plugin]
 
 [NOTE]
-*PDF Export* プラグインを購入すると、ファイル管理アクティビティで PDFエクスポートボタンが有効になります。
+*PDF Export* プラグインを購入すると、メイン画面で PDFエクスポートボタンが使用可能になります。
 
 
 == 開発中の機能
 
 今後のバージョンアップで以下の機能に対応予定です。
 
-* 画像の挿入
-* テキストの入力
 * 別のマップへのリンク
 * 以前のバージョンのMindBoardデータの読み込み
 * テーマカラーの変更
-* ペンのバリエーション（色と太さ）の変更機能
+* ペンの色と太さのカスタマイズ機能
 

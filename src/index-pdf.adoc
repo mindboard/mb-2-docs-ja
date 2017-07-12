@@ -9,6 +9,6 @@ Tomoaki Oshima <http://www.mindboardapps.com/>
 :imagesdir: ../images
 
 
-このドキュメントは MindBoard 2 Version 0.6.1 について説明しています。
+このドキュメントは MindBoard 2 Version 0.7.1 について説明しています。
 
 include::user-guide.adoc[]

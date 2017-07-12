@@ -536,9 +536,10 @@ table.CodeRay td.code>pre{padding:0}
 <li><a href="#_mindboard_2_の使い方">2. MindBoard 2 の使い方</a>
 <ul class="sectlevel2">
 <li><a href="#_概要_2">2.1. 概要</a></li>
-<li><a href="#_メインアクティビティ">2.2. メインアクティビティ</a></li>
-<li><a href="#_ファイル管理アクティビティ">2.3. ファイル管理アクティビティ</a></li>
-<li><a href="#_プラグインアクティビティ">2.4. プラグインアクティビティ</a></li>
+<li><a href="#__1_ファイル管理画面">2.2. (1)ファイル管理画面</a></li>
+<li><a href="#__2_メイン画面">2.3. (2)メイン画面</a></li>
+<li><a href="#__3_設定画面">2.4. (3)設定画面</a></li>
+<li><a href="#__4_プラグイン画面">2.5. (4)プラグイン画面</a></li>
 </ul>
 </li>
 <li><a href="#_開発中の機能">3. 開発中の機能</a></li>
@@ -551,7 +552,7 @@ table.CodeRay td.code>pre{padding:0}
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>このドキュメントは MindBoard 2 Version 0.6.1 について説明しています。</p>
+<p>このドキュメントは MindBoard 2 Version 0.7.1 について説明しています。</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -573,7 +574,7 @@ table.CodeRay td.code>pre{padding:0}
 <div class="sectionbody">
 <div class="imageblock">
 <div class="content">
-<img src="images/screenshots/mind-mapping-example.png" alt="MindBoard 2">
+<img src="images/screenshots/an-example-map.png" alt="MindBoard 2">
 </div>
 </div>
 <div class="sect2">
@@ -608,20 +609,10 @@ table.CodeRay td.code>pre{padding:0}
 <p>PDF エクスポート (有料プラグイン)</p>
 </li>
 <li>
+<p>画像の挿入/テキスト入力の対応</p>
+</li>
+<li>
 <p>Google Drive 対応</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>今後のバージョンアップで以下の機能に対応予定です。</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>画像の挿入</p>
-</li>
-<li>
-<p>テキストの入力</p>
 </li>
 </ul>
 </div>
@@ -658,7 +649,7 @@ table.CodeRay td.code>pre{padding:0}
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-Galaxy Note シリーズや Galaxy Tab A with S-Pen など S-Pen 対応の Android タブレットで、もっとも使いやすくなるように設計しています。
+S Pen (Samsung) や Z Stylus (ASUS) 対応の Androidタブレットで、もっとも使いやすくなることを想定してデザインしています。
 </td>
 </tr>
 </table>
@@ -688,55 +679,172 @@ Galaxy Note シリーズや Galaxy Tab A with S-Pen など S-Pen 対応の Andro
 <div class="sect2">
 <h3 id="_概要_2"><a class="anchor" href="#_概要_2"></a>2.1. 概要</h3>
 <div class="paragraph">
-<p>MindBoard 2 は以下の３つのアクティビティから構成されています。</p>
+<p>MindBoard 2 は以下の4つの画面から構成されています。</p>
 </div>
-<div class="olist arabic">
-<ol class="arabic">
+<div class="ulist">
+<ul>
 <li>
-<p>マインドマップを編集するための <strong>(1)メインアクティビティ</strong></p>
+<p><strong>(1)ファイル管理画面</strong> 作成したマインドマップを一時的に保管するためのバッファ画面</p>
 </li>
 <li>
-<p>作成したマインドマップを一時的に保管するためのバッファである <strong>(2)ファイル管理アクティビティ</strong></p>
+<p><strong>(2)メイン画面</strong> マインドマップを編集する画面</p>
 </li>
 <li>
-<p>機能を拡張するための <strong>(3)プラグインアクティビティ</strong></p>
+<p><strong>(3)設定画面</strong> 各種設定を行う画面</p>
 </li>
-</ol>
+<li>
+<p><strong>(4)プラグイン画面</strong> 拡張機能のインストール・管理画面</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>これら各画面の切り替えは下部のナビゲーションを使用します。</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/screenshots/bottom-navigation-overview.png" alt="Bottom Navigation">
+</div>
+<div class="title">Figure 1. ナビゲーション</div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_メインアクティビティ"><a class="anchor" href="#_メインアクティビティ"></a>2.2. メインアクティビティ</h3>
+<h3 id="__1_ファイル管理画面"><a class="anchor" href="#__1_ファイル管理画面"></a>2.2. (1)ファイル管理画面</h3>
+<div class="paragraph">
+<p>ドキュメントの管理画面です。<br>
+<strong>プライマリ</strong> / <strong>アーカイブ</strong> の２つのフォルダがあります。</p>
+</div>
 <div class="imageblock">
 <div class="content">
-<img src="images/screenshots/main-activity.png" alt="Main Activity">
+<img src="images/screenshots/file-manager-overview.png" alt="File Manager">
+</div>
+<div class="title">Figure 2. フォルダ切り替え</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><span class="image"><img src="images/icons/primary-folder.png" alt="Primary Folder"></span> <strong>プライマリ</strong> / <span class="image"><img src="images/icons/archive-folder.png" alt="Archive Folder"></span> <strong>アーカイブ</strong> を切り替えるには左上にある該当のアイコンをタップします。</p>
+</li>
+</ul>
+</div>
+<div class="sect3">
+<h4 id="_プライマリフォルダ"><a class="anchor" href="#_プライマリフォルダ"></a>2.2.1. プライマリフォルダ</h4>
+<div class="paragraph">
+<p>プライマリドキュメントを管理します。</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/screenshots/file-manager-primary.png" alt="File Manager (Primary Folder)">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><span class="image"><img src="images/icons/new-page.png" alt="New Page"></span> 新規ページを追加します。</p>
+</li>
+<li>
+<p><span class="image"><img src="images/icons/download-page.png" alt="Download Page"></span> ページを Google Drive から開きます。</p>
+</li>
+<li>
+<p><span class="image"><img src="images/icons/upload-page.png" alt="Upload Page"></span> 選択中のページを Google Drive に名前をつけて保存します。</p>
+</li>
+<li>
+<p><span class="image"><img src="images/icons/sync-page.png" alt="Sync Page"></span> 選択中のページを 該当する Google Drive File にマージします。</p>
+</li>
+<li>
+<p><span class="image"><img src="images/icons/move-to-archive.png" alt="Move Page to Archive"></span> 選択中のページを アーカイブフォルダ に移動します。</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_アーカイブフォルダ"><a class="anchor" href="#_アーカイブフォルダ"></a>2.2.2. アーカイブフォルダ</h4>
+<div class="paragraph">
+<p>アーカイブドキュメントを管理します。</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/screenshots/file-manager-archive.png" alt="File Manager (Archive Folder)">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><span class="image"><img src="images/icons/revert-from-archive.png" alt="Revert Page from Archive"></span> 選択中のページを プライマリフォルダ に戻します。</p>
+</li>
+<li>
+<p><span class="image"><img src="images/icons/empty-trash.png" alt="Empty Archive"></span> アーカイブフォルダ中のファイルを全て削除します。</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="__2_メイン画面"><a class="anchor" href="#__2_メイン画面"></a>2.3. (2)メイン画面</h3>
+<div class="paragraph">
+<p>メイン画面ではマインドマップを編集します。</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/screenshots/editor-overview.png" alt="Editor">
 </div>
 </div>
 <div class="paragraph">
-<p>メインアクティビティではマインドマップを編集します。<br>
-<strong>マップ編集</strong> と <strong>ノード編集</strong> の２つのモードから構成されます。<br>
-アクションバー上のアイコンをタップすることでファイル管理アクティビティに切り替えたり、
-現在編集中のドキュメントを Google Drive に保存することができます。</p>
+<p>メイン画面は <strong>マップ編集モード</strong> と <strong>ノード編集モード</strong> の２つのモードから構成されます。</p>
 </div>
 <div class="sect3">
-<h4 id="_アクティブドキュメント編集機能"><a class="anchor" href="#_アクティブドキュメント編集機能"></a>2.2.1. アクティブドキュメント編集機能</h4>
-<div class="sect4">
-<h5 id="_マップ編集モード"><a class="anchor" href="#_マップ編集モード"></a>マップ編集モード</h5>
-<div class="imageblock">
-<div class="content">
-<img src="images/screenshots/main-activity-map-edit-mode.png" alt="Map Edit Mode">
-</div>
-</div>
+<h4 id="_マップ編集モード"><a class="anchor" href="#_マップ編集モード"></a>2.3.1. マップ編集モード</h4>
 <div class="paragraph">
 <p>ノードを自在につくりながらマインドマッピングを行うモードです。</p>
 </div>
-<div class="sect5">
-<h6 id="_ノード編集モードへの切り替え"><a class="anchor" href="#_ノード編集モードへの切り替え"></a>ノード編集モードへの切り替え</h6>
+<div class="imageblock">
+<div class="content">
+<img src="images/screenshots/editor-map-edit-mode.png" alt="Editor (Map Edit Mode)">
+</div>
+</div>
+<div class="paragraph">
+<p>右上ツールバー</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><span class="image"><img src="images/icons/change-branch-color.png" alt="Change Branch Color"></span> 選択中のノードのブランチカラーを変更します。</p>
+</li>
+<li>
+<p><span class="image"><img src="images/icons/export-as-pdf.png" alt="Export as PDF"></span> 編集中のドキュメントを PDF として Google Drive に保存します。</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>左下ツールバー</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><span class="image"><img src="images/icons/delete-node.png" alt="Delete Node"></span> 選択中のノードをを削除します。</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>右下ツールバー</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><span class="image"><img src="images/icons/undo.png" alt="Undo"></span> アンドゥします。</p>
+</li>
+<li>
+<p><span class="image"><img src="images/icons/redo.png" alt="Redo"></span> リドゥします。</p>
+</li>
+</ul>
+</div>
+<div class="sect4">
+<h5 id="_ノード編集モードへの切り替え"><a class="anchor" href="#_ノード編集モードへの切り替え"></a>ノード編集モードへの切り替え</h5>
 <div class="paragraph">
 <p>ノードをダブルタップします。</p>
 </div>
 </div>
-<div class="sect5">
-<h6 id="_子ノード作成方法"><a class="anchor" href="#_子ノード作成方法"></a>子ノード作成方法</h6>
+<div class="sect4">
+<h5 id="_子ノード作成方法"><a class="anchor" href="#_子ノード作成方法"></a>子ノード作成方法</h5>
 <div class="paragraph">
 <p>子ノードを作成するノードの左または右に表示されるハンドルを使用します。</p>
 </div>
@@ -762,8 +870,8 @@ Galaxy Note シリーズや Galaxy Tab A with S-Pen など S-Pen 対応の Andro
 </ol>
 </div>
 </div>
-<div class="sect5">
-<h6 id="_親ノードと子ノードの連結解除"><a class="anchor" href="#_親ノードと子ノードの連結解除"></a>親ノードと子ノードの連結解除</h6>
+<div class="sect4">
+<h5 id="_親ノードと子ノードの連結解除"><a class="anchor" href="#_親ノードと子ノードの連結解除"></a>親ノードと子ノードの連結解除</h5>
 <div class="imageblock">
 <div class="content">
 <img src="images/screenshots/main-activity-how-to-change-node.png" alt="Cut Branch Handle">
@@ -789,26 +897,26 @@ Galaxy Note シリーズや Galaxy Tab A with S-Pen など S-Pen 対応の Andro
 </table>
 </div>
 </div>
-<div class="sect5">
-<h6 id="_ノード位置の移動"><a class="anchor" href="#_ノード位置の移動"></a>ノード位置の移動</h6>
+<div class="sect4">
+<h5 id="_ノード位置の移動"><a class="anchor" href="#_ノード位置の移動"></a>ノード位置の移動</h5>
 <div class="paragraph">
 <p>ノードをドラッグします。</p>
 </div>
 </div>
-<div class="sect5">
-<h6 id="_ノードのリサイズ"><a class="anchor" href="#_ノードのリサイズ"></a>ノードのリサイズ</h6>
+<div class="sect4">
+<h5 id="_ノードのリサイズ"><a class="anchor" href="#_ノードのリサイズ"></a>ノードのリサイズ</h5>
 <div class="paragraph">
 <p>ノードを選択して、ノードの選択ボーダーの右下をドラッグします。</p>
 </div>
 </div>
-<div class="sect5">
-<h6 id="_ノードの折りたたみと展開"><a class="anchor" href="#_ノードの折りたたみと展開"></a>ノードの折りたたみと展開</h6>
+<div class="sect4">
+<h5 id="_ノードの折りたたみと展開"><a class="anchor" href="#_ノードの折りたたみと展開"></a>ノードの折りたたみと展開</h5>
 <div class="paragraph">
 <p>ノードを選択して、ノードの下の部分に出現する 折りたたみ/展開 ボタンをタップします。</p>
 </div>
 </div>
-<div class="sect5">
-<h6 id="_ノードの削除"><a class="anchor" href="#_ノードの削除"></a>ノードの削除</h6>
+<div class="sect4">
+<h5 id="_ノードの削除"><a class="anchor" href="#_ノードの削除"></a>ノードの削除</h5>
 <div class="paragraph">
 <p>ノードを選択して、編集ツールバーの削除アイコンをタップします。</p>
 </div>
@@ -819,18 +927,67 @@ Galaxy Note シリーズや Galaxy Tab A with S-Pen など S-Pen 対応の Andro
 </div>
 </div>
 </div>
-<div class="sect4">
-<h5 id="_ノード編集モード"><a class="anchor" href="#_ノード編集モード"></a>ノード編集モード</h5>
-<div class="imageblock">
-<div class="content">
-<img src="images/screenshots/main-activity-node-edit-mode.png" alt="Node Edit Mode">
-</div>
-</div>
+<div class="sect3">
+<h4 id="_ノード編集モード"><a class="anchor" href="#_ノード編集モード"></a>2.3.2. ノード編集モード</h4>
 <div class="paragraph">
 <p>ノードにアイデアを書くためのモードです。</p>
 </div>
+<div class="imageblock">
+<div class="content">
+<img src="images/screenshots/editor-node-edit-mode.png" alt="Editor (Node Edit Mode)">
+</div>
+</div>
 <div class="paragraph">
-<p>マップ編集モードに戻るには、画面右上のクローズボタンをタップします。</p>
+<p>右上ツールバー</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><span class="image"><img src="images/icons/choose-pen-color.png" alt="Choose Pen Color"></span> ペンの色を設定します / 選択中のグループに含まれるストロークの色を変更します。</p>
+</li>
+<li>
+<p><span class="image"><img src="images/icons/choose-text-color.png" alt="Choose Text Color"></span> 選択中のテキストの色を変更します。</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>左下ツールバー</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><span class="image"><img src="images/icons/ungroup.png" alt="Ungroup"></span> 選択中のグループを解除します。</p>
+</li>
+<li>
+<p><span class="image"><img src="images/icons/insert-image.png" alt="Insert Image"></span> 画像を挿入します。</p>
+</li>
+<li>
+<p><span class="image"><img src="images/icons/input-text.png" alt="Input Text"></span> テキストを挿入します。</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>右下ツールバー</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><span class="image"><img src="images/icons/undo.png" alt="Undo"></span> アンドゥします。</p>
+</li>
+<li>
+<p><span class="image"><img src="images/icons/redo.png" alt="Redo"></span> リドゥします。</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>右上</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><span class="image"><img src="images/icons/close-node-edit-mode.png" alt="Back To Map Edit Mode"></span> マップ編集モードに戻ります。</p>
+</li>
+</ul>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -839,13 +996,13 @@ Galaxy Note シリーズや Galaxy Tab A with S-Pen など S-Pen 対応の Andro
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-スタイラスを使用している場合は、指を使ったダブルタップジェスチャーでもマップ編集モードに戻ることができます。
+ネイティブスタイラスモードでは、指を使ったダブルタップジェスチャーでもマップ編集モードに戻ることができます。
 </td>
 </tr>
 </table>
 </div>
-<div class="sect5">
-<h6 id="_ツールスイッチャー"><a class="anchor" href="#_ツールスイッチャー"></a>ツールスイッチャー</h6>
+<div class="sect4">
+<h5 id="_ツールスイッチャー"><a class="anchor" href="#_ツールスイッチャー"></a>ツールスイッチャー</h5>
 <div class="imageblock">
 <div class="content">
 <img src="images/screenshots/main-activity-node-edit-mode-tool-sw-non-spen.png" alt="Tool Switcher"">
@@ -869,8 +1026,8 @@ Galaxy Note シリーズや Galaxy Tab A with S-Pen など S-Pen 対応の Andro
 </table>
 </div>
 </div>
-<div class="sect5">
-<h6 id="_ツールスイッチャー_スタイラス対応デバイスの場合"><a class="anchor" href="#_ツールスイッチャー_スタイラス対応デバイスの場合"></a>ツールスイッチャー ( スタイラス対応デバイスの場合 )</h6>
+<div class="sect4">
+<h5 id="_ツールスイッチャー_ネイティブスタイラスモードの場合"><a class="anchor" href="#_ツールスイッチャー_ネイティブスタイラスモードの場合"></a>ツールスイッチャー ( ネイティブスタイラスモードの場合 )</h5>
 <div class="imageblock">
 <div class="content">
 <img src="images/screenshots/main-activity-node-edit-mode-tool-sw.png" alt="Tool Switcher">
@@ -880,6 +1037,66 @@ Galaxy Note シリーズや Galaxy Tab A with S-Pen など S-Pen 対応の Andro
 <p>ペン / 消しゴム / 選択 の３つのツールがあります。<br>
 ツールの変更はツールスイッチャーから特定ツールをタップします。</p>
 </div>
+</div>
+<div class="sect4">
+<h5 id="_ストロークのグループ化"><a class="anchor" href="#_ストロークのグループ化"></a>ストロークのグループ化</h5>
+<div class="paragraph">
+<p>複数のストロークをまとめてグループにすることができます。</p>
+</div>
+<div class="paragraph">
+<p>グループ化するには、ツールスイッチャーで選択ツールを選択した状態で、対象となるストロークを指またはスタイラスで囲みます。</p>
+</div>
+<div class="paragraph">
+<p>グループに対して以下の操作が可能です。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>グループ内のストロークの色を変更</p>
+</li>
+<li>
+<p>グループのリサイズ</p>
+</li>
+<li>
+<p>グループの解除</p>
+</li>
+<li>
+<p>グループの削除</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="__3_設定画面"><a class="anchor" href="#__3_設定画面"></a>2.4. (3)設定画面</h3>
+<div class="paragraph">
+<p>各種設定を行います。</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/screenshots/settings.png" alt="Settings">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Use Native Stylus : ネイティブスタイルを使うかどうか。 <br>
+S-Pen, Z-Stylus のようなデジタイザー対応のAndroidタブレットを使用している場合にチェックします。</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="__4_プラグイン画面"><a class="anchor" href="#__4_プラグイン画面"></a>2.5. (4)プラグイン画面</h3>
+<div class="paragraph">
+<p>拡張機能の一覧です。</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/screenshots/plugins.png" alt="Plugins">
+</div>
+</div>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -887,224 +1104,19 @@ Galaxy Note シリーズや Galaxy Tab A with S-Pen など S-Pen 対応の Andro
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-現在のところペンの色は黒のみです。<br>
-将来プラグインとして複数の色や太さのペンを提供予定です。
+現在のところ、拡張機能は <strong>PDF Export</strong> プラグインのみの提供です。
 </td>
 </tr>
 </table>
 </div>
-</div>
-</div>
-</div>
 <div class="sect3">
-<h4 id="_現在のアクティブドキュメントのファイル管理"><a class="anchor" href="#_現在のアクティブドキュメントのファイル管理"></a>2.2.2. 現在のアクティブドキュメントのファイル管理</h4>
-<div class="imageblock">
-<div class="content">
-<img src="images/screenshots/main-activity-action-bar.png" alt="Main Activity">
-</div>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>(<strong>a</strong>). ファイル管理アクティビティボタン</p>
-<div class="ulist">
-<ul>
-<li>
-<p>ファイル管理アクティビティへ移動します。バックグラウンドバッファとして複数のファイルを管理できます。</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>(<strong>b</strong>). 新規ドキュメント作成ボタン</p>
-<div class="ulist">
-<ul>
-<li>
-<p>新規ドキュメントを作成してアクティブドキュメントとします。</p>
-</li>
-<li>
-<p>今まで編集していたドキュメントはバックグラウンドバッファに入ります。バックグラウンドバッファ内のファイルはファイル管理アクティビティからアクセスできます。</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>(<strong>c</strong>). ドキュメントオープンボタン</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Google Drive からファイルを開きます。</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>(<strong>d</strong>). ドキュメントセーブボタン</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Google Drive にドキュメントを保存します。</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>(<strong>e</strong>). ドキュメント同期ボタン</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Google Drive から開いたドキュメントと現在のアクティブドキュメントを同期します。</p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_ファイル管理アクティビティ"><a class="anchor" href="#_ファイル管理アクティビティ"></a>2.3. ファイル管理アクティビティ</h3>
-<div class="imageblock">
-<div class="content">
-<img src="images/screenshots/finder-activity-overview.png" alt="File Manager Activity">
-</div>
-</div>
-<div class="paragraph">
-<p>ドキュメントの管理画面です。<br>
-<strong>プライマリ</strong> / <strong>アーカイブ</strong> の２つのフォルダがあります。</p>
-</div>
-<div class="sect3">
-<h4 id="_プライマリフォルダ"><a class="anchor" href="#_プライマリフォルダ"></a>2.3.1. プライマリフォルダ</h4>
-<div class="imageblock">
-<div class="content">
-<img src="images/screenshots/finder-activity-primary-folder.png" alt="File Manager Activity Primary Folder">
-</div>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>(<strong>a</strong>). 戻るボタン</p>
-<div class="ulist">
-<ul>
-<li>
-<p>タップすると、メインアクティビティに戻ります。</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>(<strong>b</strong>). PDFエクスポートボタン</p>
-<div class="ulist">
-<ul>
-<li>
-<p>選択中のドキュメントをPDFに変換します。結果のPDFは Google Drive へ保存します。</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>(<strong>c</strong>). アーカイブへ移動ボタン</p>
-<div class="ulist">
-<ul>
-<li>
-<p>選択中のドキュメントをアーカイブフォルダへ移動します。</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>(<strong>d</strong>). プラグインボタン</p>
-<div class="ulist">
-<ul>
-<li>
-<p>プラグインアクティビティへ移動します。</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>(<strong>e</strong>). ドキュメントプレビューボタン</p>
-<div class="ulist">
-<ul>
-<li>
-<p>ダブルタップするとそのドキュメントをアクティブドキュメントとして読み込み、メインアクティビティへ戻ります。</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>(<strong>f</strong>). アーカイブフォルダ表示ボタン</p>
-<div class="ulist">
-<ul>
-<li>
-<p>タップすると、アーカイブフォルダに切り替わります。</p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_アーカイブフォルダ"><a class="anchor" href="#_アーカイブフォルダ"></a>2.3.2. アーカイブフォルダ</h4>
-<div class="imageblock">
-<div class="content">
-<img src="images/screenshots/finder-activity-archive-folder.png" alt="File Manager Activity Archive Folder">
-</div>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>(<strong>a</strong>). プライマリへ戻すボタン</p>
-<div class="ulist">
-<ul>
-<li>
-<p>選択中のドキュメントをプライマリフォルダに移動します。</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>(<strong>b</strong>). クリアボタン</p>
-<div class="ulist">
-<ul>
-<li>
-<p>アーカイブフォルダ内にあるすべてのドキュメントを完全に削除します。</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>(<strong>c</strong>). プライマリ表示ボタン</p>
-<div class="ulist">
-<ul>
-<li>
-<p>タップすると、プライマリフォルダに切り替わります。</p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_プラグインアクティビティ"><a class="anchor" href="#_プラグインアクティビティ"></a>2.4. プラグインアクティビティ</h3>
-<div class="imageblock">
-<div class="content">
-<img src="images/screenshots/plugins-activity.png" alt="Plugins Activity">
-</div>
-</div>
-<div class="paragraph">
-<p>拡張機能の一覧です。<br>
-現在のところ、拡張機能は <strong>PDF Export</strong> プラグインのみの提供です。</p>
-</div>
+<h4 id="_購入方法"><a class="anchor" href="#_購入方法"></a>2.5.1. 購入方法</h4>
 <div class="paragraph">
 <p><strong>BUY</strong> ボタンをタップすると、購入プロセスに入ります。</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/screenshots/plugins-activity-pdf-export.png" alt="Purchasing PDF Export Plugin">
+<img src="images/screenshots/purchasing-pdf-export-plugin.png" alt="Purchasing PDF Export Plugin">
 </div>
 </div>
 <div class="admonitionblock note">
@@ -1114,10 +1126,11 @@ Galaxy Note シリーズや Galaxy Tab A with S-Pen など S-Pen 対応の Andro
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-<strong>PDF Export</strong> プラグインを購入すると、ファイル管理アクティビティで PDFエクスポートボタンが有効になります。
+<strong>PDF Export</strong> プラグインを購入すると、メイン画面で PDFエクスポートボタンが使用可能になります。
 </td>
 </tr>
 </table>
+</div>
 </div>
 </div>
 </div>
@@ -1131,12 +1144,6 @@ Galaxy Note シリーズや Galaxy Tab A with S-Pen など S-Pen 対応の Andro
 <div class="ulist">
 <ul>
 <li>
-<p>画像の挿入</p>
-</li>
-<li>
-<p>テキストの入力</p>
-</li>
-<li>
 <p>別のマップへのリンク</p>
 </li>
 <li>
@@ -1146,7 +1153,7 @@ Galaxy Note シリーズや Galaxy Tab A with S-Pen など S-Pen 対応の Andro
 <p>テーマカラーの変更</p>
 </li>
 <li>
-<p>ペンのバリエーション（色と太さ）の変更機能</p>
+<p>ペンの色と太さのカスタマイズ機能</p>
 </li>
 </ul>
 </div>
@@ -1155,7 +1162,7 @@ Galaxy Note シリーズや Galaxy Tab A with S-Pen など S-Pen 対応の Andro
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2017-05-21 21:20:01 JST
+Last updated 2017-07-08 17:49:32 JST
 </div>
 </div>
 </body>
