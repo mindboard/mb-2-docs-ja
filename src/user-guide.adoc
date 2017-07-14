@@ -263,19 +263,19 @@ image::screenshots/main-activity-node-edit-mode-tool-sw.png[Tool Switcher]
 
 image::screenshots/settings.png[Settings]
 
-* *Use Native Stylus* : ネイティブスタイルを使うかどうか。  +
+* *Use Native Stylus* : ネイティブスタイラスを使うかどうか。  +
 S-Pen, Z-Stylus のようなデジタイザー対応のAndroidタブレットを使用している場合にチェックします。
 
 
 
 === (4)プラグイン画面
 
-拡張機能の一覧です。
+プラグインの一覧です。
 
 image::screenshots/plugins.png[Plugins]
 
 [NOTE]
-現在のところ、拡張機能は *PDF Export* プラグインのみの提供です。
+現在のところ、*PDF Export* プラグインのみです。
 
 
 ==== 購入方法
