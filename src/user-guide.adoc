@@ -9,11 +9,8 @@ image::screenshots/an-example-map.png[MindBoard 2]
 MindBoard 2 は シンプルなAndroid タブレット向けの手書きマインドマップ作成支援アプリです。
 
 指での入力/スタイラスでの入力のいずれかに対応しています。 +
-使用中の Android タブレットがスタイラス対応デバイスであればスタイラス対応のアプリとして、
-そうでなければ指による入力対応のアプリとして起動します。
+ネイティブスタイラスを使うかどうかは、設定画面の Use Native Stylus オプションを使用して、手動で変更できます。
 
-[NOTE]
-スタイラスを優先するか、指を優先するかは、設定画面の Use Native Stylus オプションを使用して、手動で変更可能です。
 
 === コンセプト
 
@@ -63,7 +60,7 @@ Google Play から https://play.google.com/store/apps/details?id=com.mindboardap
 MindBoard 2 は以下の4つの画面から構成されています。
 
 - *(1)ファイル管理画面* 作成したマインドマップを一時的に保管するためのバッファ画面
-- *(2)メイン画面* マインドマップを編集する画面
+- *(2)エディタ画面* マインドマップを編集する画面
 - *(3)設定画面* 各種設定を行う画面
 - *(4)プラグイン画面* 拡張機能のインストール・管理画面
 
@@ -83,18 +80,17 @@ image::screenshots/file-manager-overview.png[File Manager, title="フォルダ�
 * image:icons/primary-folder.png[Primary Folder] *プライマリ* / image:icons/archive-folder.png[Archive Folder] *アーカイブ* を切り替えるには左上にある該当のアイコンをタップします。
 
 
-
 ==== プライマリフォルダ
 
 プライマリドキュメントを管理します。
 
 image::screenshots/file-manager-primary.png[File Manager (Primary Folder)]
 
-* image:icons/new-page.png[New Page] 新規ページを追加します。
-* image:icons/download-page.png[Download Page] ページを Google Drive から開きます。
-* image:icons/upload-page.png[Upload Page] 選択中のページを Google Drive に名前をつけて保存します。
-* image:icons/sync-page.png[Sync Page] 選択中のページを 該当する Google Drive File にマージします。
-* image:icons/move-to-archive.png[Move Page to Archive] 選択中のページを アーカイブフォルダ に移動します。
+* image:icons/new-page.png[New Document] 新規ドキュメントを追加します。
+* image:icons/download-page.png[Download Document] ドキュメントを Google Drive から開きます。
+* image:icons/upload-page.png[Upload Document] 選択中のドキュメントを Google Drive に名前をつけて保存します。
+* image:icons/sync-page.png[Sync Document] 選択中のドキュメントを 該当する Google Drive File に同期します。
+* image:icons/move-to-archive.png[Move Document to Archive] 選択中のドキュメントを アーカイブフォルダ に移動します。
 
 
 ==== アーカイブフォルダ
@@ -103,14 +99,14 @@ image::screenshots/file-manager-primary.png[File Manager (Primary Folder)]
 
 image::screenshots/file-manager-archive.png[File Manager (Archive Folder)]
 
-* image:icons/revert-from-archive.png[Revert Page from Archive] 選択中のページを プライマリフォルダ に戻します。
-* image:icons/empty-trash.png[Empty Archive] アーカイブフォルダ中のファイルを全て削除します。
+* image:icons/revert-from-archive.png[Revert Document from Archive] 選択中のドキュメントを プライマリフォルダ に戻します。
+* image:icons/empty-trash.png[Empty Archive] アーカイブフォルダ中のドキュメントを全て削除します。
 
 
 
-=== (2)メイン画面
+=== (2)エディタ画面
 
-メイン画面ではマインドマップを編集します。
+エディタ画面ではマインドマップを編集します。
 
 image::screenshots/editor-overview.png[Editor]
 
@@ -123,16 +119,16 @@ image::screenshots/editor-overview.png[Editor]
 
 image::screenshots/editor-map-edit-mode.png[Editor (Map Edit Mode)]
 
-右上ツールバー
+ツールバー(右上)
 
 * image:icons/change-branch-color.png[Change Branch Color] 選択中のノードのブランチカラーを変更します。
 * image:icons/export-as-pdf.png[Export as PDF] 編集中のドキュメントを PDF として Google Drive に保存します。
 
-左下ツールバー
+ツールバー(左下)
 
 * image:icons/delete-node.png[Delete Node] 選択中のノードをを削除します。
 
-右下ツールバー
+ツールバー(右下)
 
 * image:icons/undo.png[Undo] アンドゥします。
 * image:icons/redo.png[Redo] リドゥします。
@@ -140,7 +136,7 @@ image::screenshots/editor-map-edit-mode.png[Editor (Map Edit Mode)]
 
 ===== ノード編集モードへの切り替え
 
-ノードをダブルタップします。
+1. ノードをダブルタップします。
 
 
 ===== 子ノード作成方法
@@ -159,10 +155,8 @@ image::screenshots/main-activity-how-to-create-sub-node.png[Creating Child Node]
 
 image::screenshots/main-activity-how-to-change-node.png[Cut Branch Handle]
 
-親ノードを選択すると、親ノードと子ノードを結ぶブランチの上の中間点にノード連結解除ハンドルが表示されます。 +
-そのハンドルをドラッグして、親ノードと子ノードの連結を解除します。
-
-連結を解除した子ノードはセントラルノードに変わります。
+1. 親ノードを選択する。 -> 親ノードと子ノードを結ぶブランチの上の中間点にノード連結解除ハンドルが表示されます。
+1. そのハンドルをドラッグして、親ノードと子ノードの連結を解除します。 -> 連結を解除した子ノードはセントラルノードに変わります。
 
 [NOTE]
 子ノード生成ハンドルをドラッグして、セントラルノードに重ねることで、そのノードを再度別の親ノードと連結できます。
@@ -170,22 +164,25 @@ image::screenshots/main-activity-how-to-change-node.png[Cut Branch Handle]
 
 ===== ノード位置の移動
 
-ノードをドラッグします。
+1. ノードをドラッグします。
 
 
 ===== ノードのリサイズ
 
-ノードを選択して、ノードの選択ボーダーの右下をドラッグします。
+1. ノードを選択します。
+1. ノードの選択ボーダーの *右下のリサイズハンドル* をドラッグします。
 
 
 ===== ノードの折りたたみと展開
 
-ノードを選択して、ノードの下の部分に出現する 折りたたみ/展開 ボタンをタップします。
+1. ノードを選択します。
+1. ノードの下の部分に出現する 折りたたみ [-] /展開 [+] ボタンをタップします。
 
 
 ===== ノードの削除
 
-ノードを選択して、編集ツールバーの削除アイコンをタップします。
+1. ノードを選択します。
+1. ツールバー(左下) image:icons/delete-node.png[Delete Node] *削除ボタン* をタップします。
 
 image::screenshots/main-activity-remove-node-icon.png[Delete Node Button"]
 
@@ -198,19 +195,19 @@ image::screenshots/editor-node-edit-mode.png[Editor (Node Edit Mode)]
 
 
 
-右上ツールバー
+ツールバー(右上)
 
 * image:icons/choose-pen-color.png[Choose Pen Color] ペンの色を設定します / 選択中のグループに含まれるストロークの色を変更します。
 * image:icons/choose-text-color.png[Choose Text Color] 選択中のテキストの色を変更します。
 
-左下ツールバー
+ツールバー(左下)
 
 * image:icons/ungroup.png[Ungroup] 選択中のグループを解除します。
 * image:icons/insert-image.png[Insert Image] 画像を挿入します。
 * image:icons/input-text.png[Input Text] テキストを挿入します。
 
 
-右下ツールバー
+ツールバー(右下)
 
 * image:icons/undo.png[Undo] アンドゥします。
 * image:icons/redo.png[Redo] リドゥします。
@@ -232,8 +229,7 @@ image::screenshots/main-activity-node-edit-mode-tool-sw-non-spen.png[Tool Switch
 ツールの変更はツールスイッチャーから特定ツールをタップします。
 
 [NOTE]
-現在のところペンの色は黒のみです。 +
-将来プラグインとして複数の色や太さのペンを提供予定です。
+将来プラグインとしてペンの太さの変更が可能になる予定です。
 
 
 ===== ツールスイッチャー ( ネイティブスタイラスモードの場合 )
@@ -248,8 +244,8 @@ image::screenshots/main-activity-node-edit-mode-tool-sw.png[Tool Switcher]
 
 複数のストロークをまとめてグループにすることができます。
 
-
-グループ化するには、ツールスイッチャーで選択ツールを選択した状態で、対象となるストロークを指またはスタイラスで囲みます。
+1. ツールスイッチャーで image:icons/selection-mode.png[Selection Tool] 選択ツールを選択します。
+1. 対象となるストロークを指またはスタイラスで囲みます。
 
 
 グループに対して以下の操作が可能です。
