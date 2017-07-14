@@ -218,7 +218,7 @@ image::screenshots/editor-node-edit-mode.png[Editor (Node Edit Mode)]
 * image:icons/close-node-edit-mode.png[Back To Map Edit Mode] マップ編集モードに戻ります。
 
 [NOTE]
-設定画面で *Use Native Stylus* がチェックされている場合は、指を使ったダブルタップジェスチャーを使ってマップ編集モードに戻ることができます。
+設定画面で *Use Native Stylus* がチェックされている場合は、指によるダブルタップジェスチャーを使ってマップ編集モードに戻ることができます。
 
 
 ===== ツールスイッチャー 
