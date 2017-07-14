@@ -122,7 +122,7 @@ image::screenshots/editor-map-edit-mode.png[Editor (Map Edit Mode)]
 ツールバー(右上)
 
 * image:icons/change-branch-color.png[Change Branch Color] 選択中のノードのブランチカラーを変更します。
-* image:icons/export-as-pdf.png[Export as PDF] 編集中のドキュメントを PDF として Google Drive に保存します。
+* image:icons/export-as-pdf.png[Export as PDF] 編集中のドキュメントを PDF として Google Drive に保存します。( 要 PDF Export プラグイン )
 
 ツールバー(左下)
 
@@ -218,7 +218,7 @@ image::screenshots/editor-node-edit-mode.png[Editor (Node Edit Mode)]
 * image:icons/close-node-edit-mode.png[Back To Map Edit Mode] マップ編集モードに戻ります。
 
 [NOTE]
-ネイティブスタイラスモードでは、指を使ったダブルタップジェスチャーでもマップ編集モードに戻ることができます。
+設定画面で *Use Native Stylus* がチェックされている場合は、指を使ったダブルタップジェスチャーを使ってマップ編集モードに戻ることができます。
 
 
 ===== ツールスイッチャー 
@@ -232,7 +232,7 @@ image::screenshots/main-activity-node-edit-mode-tool-sw-non-spen.png[Tool Switch
 将来プラグインとしてペンの太さの変更が可能になる予定です。
 
 
-===== ツールスイッチャー ( ネイティブスタイラスモードの場合 )
+===== ツールスイッチャー ( *Use Native Stylus* チェックされている場合 )
 
 image::screenshots/main-activity-node-edit-mode-tool-sw.png[Tool Switcher]
 
@@ -263,7 +263,7 @@ image::screenshots/main-activity-node-edit-mode-tool-sw.png[Tool Switcher]
 
 image::screenshots/settings.png[Settings]
 
-* Use Native Stylus : ネイティブスタイルを使うかどうか。  +
+* *Use Native Stylus* : ネイティブスタイルを使うかどうか。  +
 S-Pen, Z-Stylus のようなデジタイザー対応のAndroidタブレットを使用している場合にチェックします。
 
 
